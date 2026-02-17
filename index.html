@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Rental System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <h1>🚗 Car Rental</h1>
+      <p>Start empty • Add cars • Rent & return • Saved permanently</p>
+    </div>
+    <div class="pill" id="countPill">0 cars</div>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- Add Car -->
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Add New Car</h2>
+      <p>Add brand, model, price, and image URL.</p>
+    </div>
+
+    <div class="form-grid">
+      <label>
+        Brand
+        <input id="brand" placeholder="Toyota" />
+      </label>
+
+      <label>
+        Model
+        <input id="model" placeholder="Camry" />
+      </label>
+
+      <label>
+        Price / day (₹)
+        <input id="price" type="number" placeholder="100" />
+      </label>
+
+      <label>
+        Image URL
+        <input id="image" placeholder="https://... or /images/car.jpg" />
+      </label>
+    </div>
+
+    <button class="btn primary" id="addBtn">Add Car</button>
+  </section>
+
+  <!-- Rent Car -->
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Rent a Car</h2>
+      <p>Select an available car and rent it.</p>
+    </div>
+
+    <div class="form-grid">
+      <label>
+        Customer name
+        <input id="customer" placeholder="Velvishal" />
+      </label>
+
+      <label>
+        Select car
+        <select id="carSelect"></select>
+      </label>
+
+      <label class="span-2">
+        Rental days
+        <input id="days" type="number" placeholder="3" />
+      </label>
+    </div>
+
+    <button class="btn primary" id="rentBtn">Rent Now</button>
+  </section>
+
+  <!-- Cars -->
+  <section class="panel full">
+    <div class="panel-head row">
+      <div>
+        <h2>Cars</h2>
+        <p>Delete available cars • Return rented cars</p>
+      </div>
+
+      <div class="search">
+        <input id="searchInput" placeholder="Search brand / model..." />
+      </div>
+    </div>
+
+    <div class="car-grid" id="carGrid"></div>
+
+    <p class="message" id="message"></p>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
